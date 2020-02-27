@@ -21,10 +21,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from chiron device
 $(call inherit-product, device/xiaomi/chiron/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AOSP stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_chiron
+# MIUI Camera
+$(call inherit-product, vendor/apps/MiuiCamera/config.mk)
+
+# Firmware
+$(call inherit-product-if-exists, vendor/apps/firmware-chiron/config.mk)
+
+# ScreenRecorder
+$(call inherit-product-if-exists, vendor/apps/OPScreenRecord/config.mk)
+
+PRODUCT_NAME := aosp_chiron
 PRODUCT_DEVICE := chiron
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi MIX 2

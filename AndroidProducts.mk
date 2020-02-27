@@ -15,9 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_chiron.mk
+    $(LOCAL_DIR)/aosp_chiron.mk
 
-COMMON_LUNCH_CHOICES := \
-    lineage_chiron-user \
-    lineage_chiron-userdebug \
-    lineage_chiron-eng
