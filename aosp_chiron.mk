@@ -25,7 +25,7 @@ $(call inherit-product, device/xiaomi/chiron/device.mk)
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # MIUI Camera
-$(call inherit-product, vendor/apps/MiuiCamera/config.mk)
+$(call inherit-product, vendor/apps/MiuiCamera-chiron/config.mk)
 
 # Firmware
 $(call inherit-product-if-exists, vendor/apps/firmware-chiron/config.mk)
